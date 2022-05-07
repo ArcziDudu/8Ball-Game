@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Magic Ball</title>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="own">Dodaj własną odpowiedź</button>
+        <div class="wrapper__info">
+            <h1>Magic 8Ball</h1>
+            <p>Zadaj pytanie, kliknij bilę  i  poznaj  prawdę!</p>
+        </div>
+
+        <div class="wrapper__ball-img">
+            <img src="https://cdn.pixabay.com/photo/2012/04/16/11/05/ball-35516_1280.png" alt="bila z numerem 8">
+        </div>
+
+        <div class="wrapper__question-area">
+            <h2>Zadaj pytanie:</h2>
+            <input type="text">
+            <p class="answer"></p>
+            <p class="error"></p>
+        </div>
+        <div class="wrapper__own-answer">
+            <div class="X"><p>anuluj</p></div>
+            <h1>Dodaj własną odpowiedź!</h1>
+            <input class="new" type="text" placeholder="wpisz treść">
+            <button class="add">Dodaj</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

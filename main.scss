@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #094d7e 74%);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+    .own{
+        align-self: flex-end;
+        position: relative;
+        top: 10%;
+        width: 200px;
+        padding: 10px;
+        background-color: #094d7e;
+        border: 2px solid #333;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 4px 4px black;
+    }
+    &__info{
+        text-align: center;
+        font-size: 30px;
+        h1{
+            margin-bottom: 10px;
+            font-size: 60px;
+        }
+    }
+    &__ball-img{
+        position: relative;
+        height: 250px;
+        img{
+            position: absolute;
+            top: 30px;
+            left: 300px;
+            width: 300px;
+            cursor: pointer;
+        }
+    }
+    &__question-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 24px;
+        h2{
+            margin-bottom: 10px;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        input{
+            padding: 10px 20px;
+            width: 80%;
+            font-size: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+        .answer{
+            margin-top: 30px;
+        }
+        span{
+            font-weight: bold;
+        }
+        .error{
+            font-weight: bold;
+            color: #3add8c;
+        }
+    }
+    &__own-answer{
+        position: absolute;
+        left: -100%;
+        right: -100%;
+        width: 200px;
+        height: 200px;
+        background-image: linear-gradient(315deg, #7f5a83 0%, #094d7e 74%);
+        border: 2px solid #333;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        input{
+            width: 80%;
+            margin: 20px auto;
+        }
+        button{
+            width: 80%;
+            margin: 10px auto;
+            background-color: #094d7e;
+            border: 1px solid black;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .X{
+            padding: 5px;
+            color: rgb(8, 8, 8);
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+}
+.shake-animation{
+    animation: shake 1s 1;
+}
+@keyframes shake{
+    0%{
+        left: 290px;
+    }
+    20%{
+        left: 340px;
+    }
+    40%{
+        left: 290px;
+    }
+    60%{
+        left: 340px;
+    }
+    80%{
+        left: 290px;
+    }
+    100%{
+        left: 300px;
+    }
+}
+
+.own-animation{
+animation: own .2s 1 linear forwards;
+}
+.own2-animation{
+    animation: own2 .2s 1 linear forwards;
+}
+@keyframes own{
+    from{
+       left: -100%;
+       right: -100%;
+
+    }
+    to{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes own2{
+    from{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    to{
+        left: -100%;
+        right: -100%;
+    }
+}
